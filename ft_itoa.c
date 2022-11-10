@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elliech <elliech@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 13:43:32 by elliech           #+#    #+#             */
-/*   Updated: 2022/10/30 19:22:49 by elliech          ###   ########.fr       */
+/*   Created: 2022/10/29 11:00:39 by yochakib          #+#    #+#             */
+/*   Updated: 2022/11/09 20:11:09 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count(int n) // count len of the string
+int	ft_count(int n)
 {
 	int	i;
 
@@ -25,42 +25,48 @@ static int	ft_count(int n) // count len of the string
 	return (i);
 }
 
-static void	ft_copy(char *p, int n, int len) // 
+void	*ft_copy(char *ptr, int n, int len)
 {
-	p[len] = 0;
+	ptr[len] = '\0';
 	while (len > 0)
 	{
 		len--;
-		p[len] = n % 10 + 48;
+		ptr[len] = n % 10 + 48;
 		n = n / 10;
 	}
+	return (0);
 }
 
 char	*ft_itoa(int n)
 {
 	int		len;
-	char	*p;
+	char	*ptr;
 
-	if (n == -2147483648) // hard code xd
+	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	if (n == 0) // hard code xp
+	if (n == 0)
 		return (ft_strdup("0"));
 	else if (n < 0)
 	{
-		n = n * -1; 
-		len = ft_count(n) + 1; 
-		p = malloc (len + 1 * sizeof(char));
-		if (!p)
-			return (NULL);
-		ft_copy(p, n, len);
-		p[0] = '-';
-		return (p);
+		n = n * (-1);
+		len = ft_count(n) + 1;
+		ptr = malloc(sizeof(char *) * len + 1);
+		if (!ptr)
+			return (0);
+		ft_copy(ptr, n, len);
+		ptr[0] = '-';
+		return (ptr);
 	}
 	else
 	{
-		len = ft_count(n);
-		p = malloc(len + 1 * sizeof(char));
-		ft_copy(p, n, len);
-		return (p);
+		len = ft_count(n) + 1;
+		ptr = malloc(sizeof(char *) * len + 1);
+		ft_copy(ptr, n, len);
+		return (ptr);
 	}
 }
+
+/*  int main()
+{
+    ft_itoa(1 );
+}*/

@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 12:45:50 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 21:36:08 by yochakib         ###   ########.fr       */
+/*   Created: 2022/10/31 20:09:30 by yochakib          #+#    #+#             */
+/*   Updated: 2022/11/09 21:09:30 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	while (i < dstsize && *dst)
-	{
-		dst++;
-		i++;
-	}
-	if (i == dstsize)
-		return (i + ft_strlen(src));
-	j = 0;
-	while (src[j])
-	{
-		if (j < dstsize - i - 1)
-			*dst ++ = src[j];
-		j++;
-	}
-	*dst = 0;
-	return (i + j);
+	write(fd, &c, 1);
 }
+
+/* int main()
+{
+    int fd;
+    fd = open("test", O_WRONLY  | O_CREAT);
+    ft_putchar_fd('c', fd);
+    return 0;
+} */

@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_subsstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 12:45:50 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 21:36:08 by yochakib         ###   ########.fr       */
+/*   Created: 2022/10/18 13:30:37 by yochakib          #+#    #+#             */
+/*   Updated: 2022/11/09 21:52:37 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	char	*ptr;
+	size_t	newstart;
 
 	i = 0;
-	while (i < dstsize && *dst)
+	newstart = (size_t)start;
+	if (s == 0)
+		return (NULL);
+	ptr = malloc ((len + 1) * sizeof(char));
+	if (ptr == 0)
+		return (NULL);
+	while (i < len && newstart < strlen(s))
 	{
-		dst++;
+		ptr[i] = s[newstart + i];
 		i++;
 	}
-	if (i == dstsize)
-		return (i + ft_strlen(src));
-	j = 0;
-	while (src[j])
-	{
-		if (j < dstsize - i - 1)
-			*dst ++ = src[j];
-		j++;
-	}
-	*dst = 0;
-	return (i + j);
+	ptr[i] = '\0';
+	return (ptr);
 }
+
+/* int main()
+{
+    char res[]="";
+    printf("%s\n",ft_substr(res,2,0));
+    return(0);
+} */

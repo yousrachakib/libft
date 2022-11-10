@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 12:45:50 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 21:36:08 by yochakib         ###   ########.fr       */
+/*   Created: 2022/10/31 20:19:14 by yochakib          #+#    #+#             */
+/*   Updated: 2022/11/09 21:15:30 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
 
 	i = 0;
-	while (i < dstsize && *dst)
+	while (s[i])
 	{
-		dst++;
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	if (i == dstsize)
-		return (i + ft_strlen(src));
-	j = 0;
-	while (src[j])
-	{
-		if (j < dstsize - i - 1)
-			*dst ++ = src[j];
-		j++;
-	}
-	*dst = 0;
-	return (i + j);
 }
+
+/* int main()
+{
+    int fd;
+    
+    fd = open("test", O_WRONLY | O_CREAT );
+    ft_putstr_fd("yousra", fd);
+    return 0;
+} */

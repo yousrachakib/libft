@@ -6,19 +6,22 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:09:48 by yochakib          #+#    #+#             */
-/*   Updated: 2022/10/14 16:12:09 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/09 21:54:55 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
-    if ( c >= 'A' && c <= 'Z')
-        c += 32;   
-    return (c);       
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
-#include<stdio.h>
+
+/* #include<stdio.h>
 int main()
 {
     printf("%d\n",ft_tolower('b'));
     return 0;
-}
+}*/

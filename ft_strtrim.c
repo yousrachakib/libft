@@ -6,58 +6,55 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 00:52:24 by yochakib          #+#    #+#             */
-/*   Updated: 2022/10/21 00:24:32 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/09 21:49:49 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len);
-
-static int    ft_check(char const *set, char c)
+static int	ft_check(char const *set, char c)
 {
-    size_t    i;
+	size_t	i;
 
-    i = 0;
-    while (set[i])
-    {
-        if (set[i] == c)
-            return (1);
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (set[i])
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
 }
 
-char    *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    size_t    i;
-    size_t    j;
+	size_t	i;
+	size_t	j;
 
-    i = 0;
-    if (s1 == NULL)
-        return (0);
-    while (s1[i])
-    {
-        if (ft_check(set, s1[i]) == 1)
-            i++;
-        else
-            break ;
-    }
-
-    j = strlen(s1) - 1;
-    while (j > 0)
-    {
-        if (ft_check(set, s1[j]) == 1)
-            j--;
-        else
-            break ;
-    }
-    return (ft_substr(s1, i, (j + 1) - i));
+	i = 0;
+	if (s1 == NULL)
+		return (0);
+	while (s1[i])
+	{
+		if (ft_check(set, s1[i]) == 1)
+			i++;
+		else
+			break ;
+	}
+	j = strlen(s1) - 1;
+	while (j > 0)
+	{
+		if (ft_check(set, s1[j]) == 1)
+			j--;
+		else
+			break ;
+	}
+	return (ft_substr(s1, i, (j + 1) - i));
 }
-int main()
+
+/* int main()
 {
   char tst[]="@@yousra@@";
   char sep[]="@@";
   
-}
+} */

@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 12:45:50 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 21:36:08 by yochakib         ###   ########.fr       */
+/*   Created: 2022/10/31 12:12:28 by yochakib          #+#    #+#             */
+/*   Updated: 2022/11/09 21:43:14 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	size_t	a;
 	size_t	i;
-	size_t	j;
+	char	*c;
 
-	i = 0;
-	while (i < dstsize && *dst)
+	a = 0;
+	i = ft_strlen(s);
+	c = malloc (sizeof(char) * (i + 1));
+	if (!s)
+		return (0);
+	while (a < i)
 	{
-		dst++;
-		i++;
+		c[a] = f(a, s[a]);
+		a++;
 	}
-	if (i == dstsize)
-		return (i + ft_strlen(src));
-	j = 0;
-	while (src[j])
-	{
-		if (j < dstsize - i - 1)
-			*dst ++ = src[j];
-		j++;
-	}
-	*dst = 0;
-	return (i + j);
+	c[a] = '\0';
+	return (c);
 }

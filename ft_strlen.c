@@ -6,24 +6,24 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 12:36:00 by yochakib          #+#    #+#             */
-/*   Updated: 2022/10/12 12:49:50 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/09 21:41:10 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-int ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-    int i;
-    i = 0;
-    if (s)
-    {
-        while (s[i] != '\0')
-        i++;
-    }
-    return (i);
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
-int main()
+
+/* int main()
 {
     char str[]= "test";
     printf("%d\n", ft_strlen(str));
-}
+} */

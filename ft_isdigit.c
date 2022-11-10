@@ -6,21 +6,22 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 11:54:45 by yochakib          #+#    #+#             */
-/*   Updated: 2022/10/12 12:01:37 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/09 14:59:04 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if( c >= '0' && c <= '9')
-        return (1);
-    return(0);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }
-int main()
+
+/* int main()
 {
     printf("%d\n",ft_isdigit(5));
     return 0;
     
-}
+}*/
