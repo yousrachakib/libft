@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 00:52:24 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 21:49:49 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/11 20:29:10 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		else
 			break ;
 	}
-	j = strlen(s1) - 1;
+	j = ft_strlen(s1) - 1;
 	while (j > 0)
 	{
 		if (ft_check(set, s1[j]) == 1)
@@ -51,10 +51,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (ft_substr(s1, i, (j + 1) - i));
 }
-
-/* int main()
-{
-  char tst[]="@@yousra@@";
-  char sep[]="@@";
+// int main()
+// {
+//   char tst[]="";
+//   char sep[]="";
+// 		printf("%s", ft_strtrim(tst,sep));
   
-} */
+// }

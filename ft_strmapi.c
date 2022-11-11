@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 12:12:28 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 21:43:14 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/11 19:52:31 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	a = 0;
 	i = ft_strlen(s);
 	c = malloc (sizeof(char) * (i + 1));
+	if (!c)
+		return (0);
 	if (!s)
 		return (0);
 	while (a < i)

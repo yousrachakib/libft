@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 18:13:26 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 21:14:02 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/11 20:43:46 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	ft_putnbr_fd(int n, int fd)
 /* int main()
 {
     int fd;
-    fd = open("test", O_RDWR | O_CREAT);
+    fd = open("test", O_RDWR | O_CREAT,777);
     ft_putnbr_fd(-214, fd);
     return 0;
 } */

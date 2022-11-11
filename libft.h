@@ -6,10 +6,9 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 21:00:19 by yochakib          #+#    #+#             */
-/*   Updated: 2022/10/29 21:00:47 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/11 20:32:56 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef LIBFT_H
 # define LIBFT_H

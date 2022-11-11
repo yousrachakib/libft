@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:00:39 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 20:11:09 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/11 20:28:42 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*ft_itoa(int n)
 	{
 		n = n * (-1);
 		len = ft_count(n) + 1;
-		ptr = malloc(sizeof(char *) * len + 1);
+		ptr = malloc(sizeof(char) * len + 1);
 		if (!ptr)
 			return (0);
 		ft_copy(ptr, n, len);
@@ -59,8 +59,8 @@ char	*ft_itoa(int n)
 	}
 	else
 	{
-		len = ft_count(n) + 1;
-		ptr = malloc(sizeof(char *) * len + 1);
+		len = ft_count(n);
+		ptr = malloc(sizeof(char) * len + 1);
 		ft_copy(ptr, n, len);
 		return (ptr);
 	}
