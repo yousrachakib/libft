@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:25:24 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 21:27:26 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/12 15:18:36 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,17 +103,3 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
-/* int main()
-{
-    int i;
-    i = 0;
-    char s[]= ",,11,22,33,44";
-    char **res;
-    res = ft_split(s,',');
-    while (i < 3)
-    {
-        printf("%s\n",res[i]);
-        i++;
-    }
-    return (0);
-}*/

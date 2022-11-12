@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 22:06:57 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/11 20:31:55 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/12 15:18:18 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (ptr);
 }
 
-/* int main()
-{
-    char s1[]="yousra";
-    char s2[]="chakib";
-    
-    printf("%s\n",ft_strjoin(s1,s2));
-    return 0;
-} */

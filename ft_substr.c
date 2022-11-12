@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 13:30:37 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/11 19:10:46 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/12 14:42:22 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[j] = '\0';
 	return (ptr);
 }
-
-/* int main()
-{
-    char res[]="";
-    printf("%s\n",ft_substr(res,2,0));
-    return(0);
-} */

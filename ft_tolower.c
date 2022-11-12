@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:09:48 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 21:54:55 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/12 15:17:51 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,4 @@ int	ft_tolower(int c)
 	return (c);
 }
 
-/* #include<stdio.h>
-int main()
-{
-    printf("%d\n",ft_tolower('b'));
-    return 0;
-}*/
+

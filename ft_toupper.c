@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 22:53:31 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 21:56:07 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/12 15:17:47 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,3 @@ int	ft_toupper(int c)
 	return (c);
 }
 
-/* #include <stdio.h>
-
-int main()
-{
-    printf("%c\n",ft_toupper('b'));
-    return 0;
-}*/

@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 13:28:05 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/11 20:48:35 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/12 15:15:05 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,3 @@ void	*ft_memset(void *s, int c, size_t len)
 	}
 	return (str);
 }
-
-/* int main()
-{
-    char str[8] = "yousra63";
-    printf("%s\n", ft_memset(str, 'd', 9));
-    // printf("%s\n", memset(str, 'd', 9));
-    return 0;    
-}*/

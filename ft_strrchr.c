@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:13:38 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 21:46:17 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/12 15:17:59 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,4 @@ char	*ft_strrchr(const char *s, int c)
 	return (0);
 }
 
-/* #include <stdio.h>
 
-int main()
-{
-    char tst[]="yoyoyoyooy";
-    char tst1[]="yoyoyoyooy";
-    printf("%s\n",ft_strrchr(tst, 'o'));
-    printf("%s\n",strrchr(tst1, 'o'));
-    return(0);
-}*/
