@@ -6,13 +6,13 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:00:39 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/11 20:28:42 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/17 22:29:09 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count(int n)
+static int	ft_count(int n)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ int	ft_count(int n)
 	return (i);
 }
 
-void	*ft_copy(char *ptr, int n, int len)
+static void	*ft_copy(char *ptr, int n, int len)
 {
 	ptr[len] = '\0';
 	while (len > 0)
@@ -65,8 +65,3 @@ char	*ft_itoa(int n)
 		return (ptr);
 	}
 }
-
-/*  int main()
-{
-    ft_itoa(1 );
-}*/

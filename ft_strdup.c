@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 14:54:49 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/12 13:12:45 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:42:01 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s1)
 
 	i = 0;
 	len = ft_strlen(s1);
-	ptr = (char *)malloc(sizeof(char) * len + 1);
+	ptr =malloc(sizeof(char) * len + 1);
 	if (!ptr)
 		return (0);
 	while (i < len)

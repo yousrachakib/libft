@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 00:52:24 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/12 11:48:55 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/18 15:52:36 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	j;
 
 	i = 0;
-	if (s1 == NULL)
+	if (s1 == NULL || set == NULL)
 		return (0);
 	while (s1[i])
 	{
@@ -42,7 +42,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 			break ;
 	}
 	j = ft_strlen(s1) - 1;
-	while (j > 0)
+	while (j)
 	{
 		if (ft_check(set, s1[j]) == 1)
 			j--;

@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 13:07:29 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 20:14:14 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/17 22:49:23 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-/* int main()
-{
-    unsigned char tst[]="yousra";
-    printf("%s\n", ft_memchr(tst, 's', 6));
-    // printf("%s\n", memchr(tst, 's', 6));
-    return 0;
-}*/

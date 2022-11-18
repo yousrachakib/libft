@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 11:54:45 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 14:59:04 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/14 17:33:08 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-
-/* int main()
-{
-    printf("%d\n",ft_isdigit(5));
-    return 0;
-    
-}*/

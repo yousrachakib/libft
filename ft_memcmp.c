@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 14:19:59 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 20:16:04 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/17 22:54:02 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/* int main()
-{
-    char tst[] = "hyf";
-    char tst1[] = "hyf";
-    printf("%d\n", ft_memcmp(tst,tst1, 4));
-    // printf("%d\n", memcmp(tst,tst1, 4));
-    return 0;
-} */

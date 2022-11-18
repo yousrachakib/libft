@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 12:04:02 by yochakib          #+#    #+#             */
-/*   Updated: 2022/11/09 14:53:26 by yochakib         ###   ########.fr       */
+/*   Updated: 2022/11/14 17:32:39 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-
-/* int main()
-{
-    printf("%d\n",ft_isalnum(13));
-    return (0);    
-} */
